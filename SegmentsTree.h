@@ -3,7 +3,7 @@
 
 using namespace std;
 
-template<class T>
+template<class T, T ZERO>
 class SegmentsTree {
     uint32_t MAX_ITEMS;
     vector<T> array;
@@ -22,7 +22,7 @@ class SegmentsTree {
     const T better_query(uint32_t l, uint32_t r) {
         uint32_t level_start = MAX_ITEMS;
 
-        T sum;
+        T sum = ZERO;
         do {
             if (l & 1) {
                 sum = sum + array[level_start + l - 1];
