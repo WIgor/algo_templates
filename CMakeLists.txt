@@ -3,5 +3,5 @@ project(algo_templates)
 
 set(CMAKE_CXX_STANDARD 14)
 
-set(SOURCE_FILES main.cpp SegmentsTree.h)
+set(SOURCE_FILES main.cpp SegmentsTree.h FenwikTree.h)
 add_executable(algo_templates ${SOURCE_FILES})
