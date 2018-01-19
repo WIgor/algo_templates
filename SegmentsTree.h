@@ -19,7 +19,7 @@ class SegmentsTree {
         return v;
     }
 
-    const T better_query(uint32_t l, uint32_t r) {
+    const T Better_query(uint32_t l, uint32_t r) {
         uint32_t level_start = MAX_ITEMS;
 
         T sum = ZERO;
@@ -45,7 +45,7 @@ public:
         array.resize(2 * MAX_ITEMS);
     }
 
-    void build(const vector<T> &initial) {
+    void Build(const vector<T> &initial) {
         uint32_t level_start = MAX_ITEMS;
 
         auto target = array.begin();
@@ -62,7 +62,7 @@ public:
         } while (level_start);
     }
 
-    void update(uint32_t idx, T t) {
+    void Update(uint32_t idx, T t) {
         uint32_t index = idx;
         uint32_t level_start = MAX_ITEMS;
         while (level_start) {
@@ -72,8 +72,8 @@ public:
         }
     }
 
-    const T query(uint32_t l, uint32_t r) {
-        return better_query(l, r);
+    const T Query(uint32_t l, uint32_t r) {
+        return Better_query(l, r);
     }
 
     const T operator[](uint32_t index) {

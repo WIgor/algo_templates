@@ -4,13 +4,13 @@
 
 using namespace std;
 
-class FenwicTree {
+class FenwikTree {
     vector<int> rbt;
 public:
-    FenwicTree(int size) : rbt(size, 0) {
+    FenwikTree(int size) : rbt(size, 0) {
     }
 
-    int sum(int i) {
+    int Sum(int i) {
         int result = 0;
         while (i >= 0) {
             result += rbt[i];
@@ -19,7 +19,7 @@ public:
         return result;
     }
 
-    void inc(int i, int delta) {
+    void Inc(int i, int delta) {
         while (i < rbt.size()) {
             rbt[i] += delta;
             i = i | (i+1);
